@@ -61,3 +61,11 @@ function setActiveLink() {
     }
   });
 }
+
+window.addEventListener("load", async () => {
+  await ComponentLoader.loadAll();
+  setActiveLink();
+
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.remove();
+});
