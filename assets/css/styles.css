@@ -651,6 +651,21 @@ a:hover {
   }
 }
 
+/* ========== MENÚ MÓVIL ==========  */
+@media (max-width: 639px) {
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+  }
+}
+
 /* ========== ANIMACIONES ADICIONALES ========== */
 @keyframes fadeInUp {
   from {
