@@ -2,6 +2,8 @@
 
 Landing page profesional para clínicas veterinarias, desarrollada con HTML, CSS y JavaScript. Diseño moderno, responsive y optimizado para atraer y convertir visitantes en clientes.
 
+🌐 **Ver proyecto online:** [veterinaria-landing-page.netlify.app](https://veterinaria-landing-page.netlify.app)
+
 ## 📋 Acerca del proyecto
 
 Sitio web estático para servicios veterinarios que incluye:
