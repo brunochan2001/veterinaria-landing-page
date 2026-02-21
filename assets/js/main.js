@@ -4,11 +4,13 @@ const CONFIG = {
 
 class ComponentLoader {
   static async loadAll() {
+    this.spinner();
     await this.loadHead();
     await Promise.all([
       this.loadComponent("header", "header-container"),
       this.loadComponent("footer", "footer-container"),
     ]);
+    this.removeSpinner();
   }
 
   static async loadComponent(name, targetId) {
@@ -31,6 +33,47 @@ class ComponentLoader {
     [...doc.head.children].forEach((el) => {
       document.head.appendChild(el.cloneNode(true));
     });
+  }
+
+  static spinner() {
+    const style = document.createElement("style");
+    style.innerHTML = `
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+    }
+
+    #page-loader .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #e5e5e5;
+      border-top: 5px solid #000;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  `;
+
+    document.head.appendChild(style);
+
+    const loader = document.createElement("div");
+    loader.id = "page-loader";
+    loader.innerHTML = `<div class="spinner"></div>`;
+
+    document.body.prepend(loader);
+  }
+
+  static removeSpinner() {
+    const loader = document.getElementById("page-loader");
+    if (loader) loader.remove();
   }
 }
 
@@ -61,11 +104,3 @@ function setActiveLink() {
     }
   });
 }
-
-window.addEventListener("load", async () => {
-  await ComponentLoader.loadAll();
-  setActiveLink();
-
-  const loader = document.getElementById("page-loader");
-  if (loader) loader.remove();
-});
