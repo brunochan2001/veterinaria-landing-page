@@ -58,3 +58,39 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Sección de valores */
+.values-section {
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--white) 100%);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.value-item {
+  background: var(--white);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.value-item h3 {
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+}

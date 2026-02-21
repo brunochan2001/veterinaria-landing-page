@@ -7,6 +7,138 @@
     <!-- Header será cargado dinámicamente desde components/header.html -->
     <div id="header-container"></div>
 
+    <main>
+      <!-- Grilla de servicios profesionales (cards) -->
+      <section
+        class="container"
+        style="margin-bottom: var(--space-2xl); margin-top: var(--space-2xl)"
+      >
+        <h2 class="section-title">Especialidades que ofrecemos</h2>
+        <div class="cards-grid">
+          <!-- Card 1 - Consulta general -->
+          <article class="service-card">
+            <div class="card-icon">🩺</div>
+            <h3 class="card-title">Consulta general</h3>
+            <p class="card-description">
+              Revisión completa, exploración física, diagnóstico y plan de
+              prevención. Para perros y gatos de cualquier edad.
+            </p>
+            <div class="service-price">35€ <small>consulta</small></div>
+            <a
+              href="#contacto"
+              class="btn btn-block"
+              style="margin-top: var(--space-sm)"
+              >Llamar ahora</a
+            >
+          </article>
+
+          <!-- Card 2 - Vacunación y desparasitación -->
+          <article class="service-card">
+            <div class="card-icon">💉</div>
+            <h3 class="card-title">Vacunación & desparasitación</h3>
+            <p class="card-description">
+              Protege a tu compañero con las vacunas obligatorias y
+              recomendadas. Protocolo individualizado.
+            </p>
+            <div class="service-price">desde 25€ <small>dosis</small></div>
+            <a
+              href="#contacto"
+              class="btn btn-block"
+              style="margin-top: var(--space-sm)"
+              >Llamar ahora</a
+            >
+          </article>
+
+          <!-- Card 3 - Cirugía y traumatología -->
+          <article class="service-card">
+            <div class="card-icon">🔬</div>
+            <h3 class="card-title">Cirugía general</h3>
+            <p class="card-description">
+              Esterilizaciones, cirugía de tejidos blandos y traumatología.
+              Equipo quirúrgico y seguimiento postoperatorio.
+            </p>
+            <div class="service-price">consulta valoración</div>
+            <a
+              href="#contacto"
+              class="btn btn-block"
+              style="margin-top: var(--space-sm)"
+              >Llamar ahora</a
+            >
+          </article>
+
+          <!-- Card 4 - Odontología veterinaria -->
+          <article class="service-card">
+            <div class="card-icon">🦷</div>
+            <h3 class="card-title">Odontología</h3>
+            <p class="card-description">
+              Limpiezas bucales, extracciones y tratamiento de enfermedad
+              periodontal. Anestesia segura.
+            </p>
+            <div class="service-price">desde 65€ <small>limpieza</small></div>
+            <a
+              href="#contacto"
+              class="btn btn-block"
+              style="margin-top: var(--space-sm)"
+              >Llamar ahora</a
+            >
+          </article>
+
+          <!-- Card 5 - Peluquería canina y felina -->
+          <article class="service-card">
+            <div class="card-icon">✂️</div>
+            <h3 class="card-title">Peluquería & estética</h3>
+            <p class="card-description">
+              Baño medicado, corte de uñas, limpieza de oídos y corte de pelo
+              profesional. Para razas de pelo largo y corto.
+            </p>
+            <div class="service-price">desde 28€</div>
+            <a
+              href="#contacto"
+              class="btn btn-block"
+              style="margin-top: var(--space-sm)"
+              >Llamar ahora</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección informativa: especialistas y horario (con llamada) -->
+      <section
+        class="contact-cta"
+        id="contacto"
+        style="margin: var(--space-2xl) auto; max-width: 1100px"
+      >
+        <h3>¿Tienes dudas sobre qué servicio necesita tu mascota?</h3>
+        <p>
+          Nuestro equipo veterinario te asesorará sin compromiso. Llámanos o
+          envía un whatsapp.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="tel:+34900123456"
+            class="btn btn-large"
+            style="display: inline-flex; gap: 0.5rem; align-items: center"
+            >📞 900 123 456</a
+          >
+          <a
+            href="#"
+            class="btn btn-large btn-outline-light"
+            style="display: inline-flex; gap: 0.5rem; align-items: center"
+            >💬 whatsapp</a
+          >
+        </div>
+        <div class="service-extras">
+          <div class="extra-item">
+            <span>🕒</span> Lunes a viernes 9:00–20:00
+          </div>
+          <div class="extra-item"><span>🕒</span> Sábados 10:00–15:00</div>
+          <div class="extra-item">
+            <span>📍</span> Urgencias telefónicas 24h
+          </div>
+        </div>
+      </section>
+    </main>
+
     <!-- Footer será cargado dinámicamente desde components/footer.html -->
     <div id="footer-container"></div>
 

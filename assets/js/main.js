@@ -34,6 +34,30 @@ class ComponentLoader {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  ComponentLoader.loadAll();
+document.addEventListener("DOMContentLoaded", async () => {
+  await ComponentLoader.loadAll();
+  setActiveLink();
 });
+
+function setActiveLink() {
+  const currentPath = window.location.pathname;
+
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    const linkPath = new URL(link.href).pathname;
+
+    // Limpiar clase activa primero
+    link.classList.remove("active");
+
+    if (currentPath === linkPath) {
+      link.classList.add("active");
+    }
+
+    // Caso especial para home (index)
+    if (
+      (currentPath === "/" || currentPath.endsWith("index.html")) &&
+      (linkPath === "/" || linkPath.endsWith("index.html"))
+    ) {
+      link.classList.add("active");
+    }
+  });
+}
